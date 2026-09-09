@@ -12,7 +12,7 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-<body style="padding: 0; margin: 0; background-color: #F9F9FF;">
+<body style="padding: 0; margin: 0; background-color: #F9F9FF; min-height: 100vh; display: flex; flex-direction: column;">
     <header>
     <nav class="navbar bg-white border-bottom" style="height: 70px;">
 
@@ -71,5 +71,27 @@
         </div>
     </nav>
     </header>
+
+    <!-- Espaço para o conteúdo principal -->
+    <main style="flex: 1;">
+    </main>
+
+    <!-- Parte do rodapé no final do site (JÁ FINALIZADO) -->
+    <footer style="display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 24px 16px; width: 100%; background-color: #f2f2f2; border-top: 1px solid #bab9b9; box-sizing: border-box;">
+  
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+    <a href="#" style="text-decoration: none; color: #333333; font-size: 14px;">About</a>
+    <a href="#" style="text-decoration: none; color: #333333; font-size: 14px;">Accessibility</a>
+    <a href="#" style="text-decoration: none; color: #333333; font-size: 14px;">Help Center</a>
+    <a href="#" style="text-decoration: none; color: #333333; font-size: 14px;">Privacy & Terms</a>
+    <a href="#" style="text-decoration: none; color: #333333; font-size: 14px;">Ad Choices</a>
+    <a href="#" style="text-decoration: none; color: #333333; font-size: 14px;">Advertising</a>
+    <a href="#" style="text-decoration: none; color: #333333; font-size: 14px;">Business Services</a>
+  </div>
+
+  <p style="margin: 0; color: #666666; font-size: 13px; text-align: center;"> &copy; 2024 DesignPro Professional Network
+  </p>
+    </footer>
+</body>
 </body>
 </html>
