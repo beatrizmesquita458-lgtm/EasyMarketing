@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>EasyMarketing TRABALHOS</title>
     
     <!--link dos bootstraps utilizados :P-->
     <!-- Bootstrap -->
@@ -75,6 +75,67 @@
     <!-- Espaço para o conteúdo principal -->
     <main style="flex: 1;">
     </main>
+<!--div PAI principal do main  -->
+<div style="width: 1200px; height: 753px; background-color: blue; display: flex; justify-content: center; align-items: center; margin: 0 auto; position: relative;">
+  
+  <!--Div principal que fica dentro da div pai-->
+  <div style="width: 1104px; height: 687px; background-color: black; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; margin: 0 auto; padding-top: 32px; box-sizing: border-box;">
+    
+    <!-- div da empresa (Vermelha) -->
+    <div style="width: 1040px; height: 96px; background-color: red; display: flex; justify-content: center; align-items: center; position: relative;">
+      
+      <!-- div EasyMarketing (Violeta) -->
+      <div style="width: 420px; height: 96px; background-color: violet; display: flex; align-items: center; gap: 12px; position: absolute; top: 0; left: 0; padding: 0 16px; border-radius: 8px; box-sizing: border-box;">
+        
+        <!-- LOGO (Esquerda) -->
+        <div style="width: 60px; height: 60px; border-radius: 4px; overflow: hidden; flex-shrink: 0; background-color: white; display: flex; align-items: center; justify-content: center;">
+          <img src="https://img.freepik.com/vetores-premium/modelo-de-logotipo-de-empresa-de-tipo-minimalista_1283348-42181.jpg" alt="Logo" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+
+        <!-- TEXTOS (Direita - lado a lado da logo sem empurrar) -->
+        <div style="display: flex; flex-direction: column; justify-content: center; gap: 2px;">
+          <h2 style="margin: 0; font-size: 20px; font-weight: bold; color: white; line-height: 1.2;">
+            Designer Gráfico
+          </h2>
+          <span style="font-size: 13px; color: #f3e8ff; line-height: 1.2;">
+            TechNova Studios • São Paulo, SP, Brasil
+          </span>
+          <div style="display: flex; align-items: center; gap: 4px; font-size: 11px; color: #f3e8ff; line-height: 1.2;">
+            <span>Há 2 dias</span>
+            <span>•</span>
+            <span style="color: #ffffff; font-weight: bold;">
+              ⚡ Seja um dos 25 primeiros
+            </span>
+          </div>
+        </div>
+
+      </div>
+    
+    </div>
+     <!-- Div do "veja quem tal empresa contratou....tipo o cupon :) -->
+       <div style="width: 1040px; height: 48px; background-color: orange; display: flex; margin-top: 40px; ">
+       <!-- Div da foto que fica do lado da informação -->
+        <div style="display: flex; align-items: center; background-color: orange; padding: 10px;">
+
+  <!-- Imagem 1 (Base - fica embaixo) -->
+  <img src="https://i.pinimg.com/originals/6f/3c/4b/6f3c4b64a713ca97c08b8b9e0ccda625.jpg" alt="Pessoa 1" 
+       style="width: 48px; height: 48px; border-radius: 50%; border: 2px solid white; object-fit: cover;">
+
+  <!-- Imagem 2 (Sobreposta - puxada com margin-left negativa) -->
+  <img src="https://img.freepik.com/fotos-premium/foto-de-uma-mulher-seria-uma-mulher-de-negocios-vestida-com-roupa-formal-sentada-na-mesa-e-trabalhando-em-um-laptop-no-escritorio-isolada-sobre-uma-parede-branca_171337-98096.jpg?w=2000" alt="Pessoa 2" 
+       style="width: 48px; height: 48px; border-radius: 50%; border: 2px solid white; object-fit: cover; margin-left: -16px;">
+        </div>
+        <!-- div do texto ao lado -->
+        <div style="display: flex; margin: 0; font-size: 20px; font-weight: light; color: #4b4a4a; line-height: 1.2; margin-top: 12px;">
+            <p>Veja quem a OpenGest contratou para esse cargo</p>
+        </div>
+</div>
+</div>
+       </div>
+  </div>
+
+<!-- FECHAMENTO DO DIV PAI PRINCIPAL DO MAIN -->
+</div>
 
     <!-- Parte do rodapé no final do site (JÁ FINALIZADO) -->
     <footer style="display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 24px 16px; width: 100%; background-color: #f2f2f2; border-top: 1px solid #bab9b9; box-sizing: border-box;">
