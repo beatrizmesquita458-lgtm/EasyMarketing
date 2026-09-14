@@ -6,3 +6,5 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 
 $routes->get('/trabalhos', 'Home::trabalhos');
+$routes->get('/contratado', 'Home::contratado');
+

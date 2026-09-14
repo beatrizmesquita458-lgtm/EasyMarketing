@@ -434,9 +434,8 @@
 </div>
     </main>
 
-
-    <!-- Parte do rodapé no final do site (JÁ FINALIZADO) -->
-    <footer style="display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 24px 16px; width: 100%; background-color: #f2f2f2; border-top: 1px solid #bab9b9">
+<!-- Parte do rodapé no final do site (JÁ FINALIZADO) -->
+<footer style="display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 24px 16px; width: 100%; background-color: #f2f2f2; border-top: 1px solid #bab9b9; margin-top: auto; box-sizing: border-box;">
   
   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
     <a href="#" style="text-decoration: none; color: #333333; font-size: 14px;">About</a>
@@ -450,7 +449,7 @@
 
   <p style="margin: 0; color: #666666; font-size: 13px; text-align: center;"> &copy; 2024 DesignPro Professional Network
   </p>
-    </footer>
+</footer>
     
 </body>
 </html> 

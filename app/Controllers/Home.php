@@ -12,4 +12,30 @@ class Home extends BaseController
     {
         return view('trabalhos');
     }
+     public function contratado(): string
+    {
+        return view('contratado');
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
