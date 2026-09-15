@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contratado</title>
     <!--link dos bootstraps utilizados :P-->
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -140,6 +140,10 @@
 
 </div>
 <!-- Fechamento da div dos projetos -->
+ 
+    <!-- Div das habilidades principais -->
+     <div style="width: 258px; height: 230px; background-color: black; margin-top: 30px;">
+     </div>
 
             </div> <!-- Fechamento da Div Laranja -->
 
