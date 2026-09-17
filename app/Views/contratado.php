@@ -58,10 +58,10 @@
     <main style="padding: 40px 0; display: flex; flex-direction: column; align-items: center;">
         
         <!-- DIV PAI DE TUDO (1200px) -->
-        <div style="width: 1200px; height: 1456px; background-color: blue; display: flex; align-items: flex-start; gap: 30px; padding: 20px 30px 0 30px; box-sizing: border-box; margin-top: -40px;">
+        <div style="width: 1200px; height: 1456px; background-color: #F9F9FF; display: flex; align-items: flex-start; gap: 30px; padding: 20px 30px 0 30px; box-sizing: border-box; margin-top: -40px;">
             
             <!-- Div onde fica todo o perfil do contratado (Laranja: 258px) -->
-            <div style="width: 258px; height: 1390px; background-color: orange; display: flex; flex-direction: column; flex-shrink: 0;">
+            <div style="width: 258px; height: 1390px; background-color: #F9F9FF; display: flex; flex-direction: column; flex-shrink: 0;">
                 
                 <!-- Card do perfil (Branco: 258px) -->
                 <div style="width: 258px; height: 380px; background-color: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
@@ -143,7 +143,7 @@
                 <!-- Fechamento da div dos projetos -->
                  
                 <!-- Div pai das habilidades principais -->
-                <div style="width: 258px; height: 230px; background-color: black; margin-top: 30px;">
+                <div style="width: 258px; height: 230px; background-color: #F9F9FF; margin-top: 30px;">
                     <!-- div onde vai ficar as informações -->
                     <div style="width: 258px; height:230px; background-color: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); box-sizing: border-box;">
                       
@@ -188,7 +188,7 @@
             </div> <!-- Fechamento da Div Laranja -->
 
             <!-- Div do SOBRE MIM + PORTFOLIO EM DESTAQUE (Rosa: 822px) -->
-            <div style="width: 822px; height: 1384px; background-color: pink; display: flex; flex-direction: column; gap: 24px; flex-shrink: 0;">
+            <div style="width: 822px; height: 1384px; background-color: #F9F9FF;; display: flex; flex-direction: column; gap: 24px; flex-shrink: 0;">
                 
                 <!-- div do SOBRE MIM -->
                 <div style="width: 822px; height: 284px; background-color: white; border-radius: 15px;">
@@ -290,7 +290,18 @@ a real necessidade do usuário.</span>
             </div>
         </div>
     </div>
+    <!-- div do botão VER MAIS PROJETOS -->
+     <div style="width: 822px; height: 50px; background-color: #F9F9FF; margin-top: 60px;">
+     <!-- div onde ficará o botão -->
+     <div style="width: 822px; height: 34px; background-color: #F9F9FF; margin-top: 16px; display: flex; justify-content: center;">
+        <button style="width: 189px; height: 34px; background-color: transparent; border: 1.5px solid #0056D2; border-radius: 12px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background-color 0.2s;">
+                                <span style="font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 600; color: #0056D2;">
+                                    Ver mais projetos 
+                                </span>
+                            </button>
+     </div>   
 
+     </div>
 </div>
 
             </div>
