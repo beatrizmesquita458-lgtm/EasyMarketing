@@ -7,4 +7,6 @@ $routes->get('/', 'Home::index');
 
 $routes->get('/trabalhos', 'Home::trabalhos');
 $routes->get('/contratado', 'Home::contratado');
+$routes->get('/empresa', 'Home::empresa');
+
 

@@ -16,6 +16,10 @@ class Home extends BaseController
     {
         return view('contratado');
     }
+     public function empresa(): string
+    {
+        return view('empresa');
+    }
 }
 
 
