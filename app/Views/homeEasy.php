@@ -7,12 +7,175 @@
 
     <title>EasyMarketing Home</title>
 
-    <!--link dos bootstraps utilizados :P-->
+    <!-- Links dos componentes utilizados -->
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .interactive-link,
+    .icon-action,
+    .talent-card,
+    .project-card,
+    .popular-tag,
+    .search-button,
+    .load-more-button {
+        transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease;
+    }
+
+    .icon-action {
+        cursor: pointer;
+    }
+
+    .icon-action:hover {
+        transform: translateY(-2px);
+        color: #0052cc;
+    }
+
+    .interactive-link:hover {
+        color: #0052cc !important;
+    }
+
+    .talent-card:hover,
+    .project-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 22px rgba(15, 23, 42, .10);
+    }
+
+    .popular-tag {
+        cursor: pointer;
+    }
+
+    .popular-tag:hover {
+        background: #dbeafe !important;
+        color: #1d4ed8 !important;
+        transform: translateY(-2px);
+    }
+
+    .search-button:hover {
+        background: #003f9e !important;
+        transform: scale(1.05);
+    }
+
+    .load-more-button:hover {
+        background: #0066cc !important;
+        color: white !important;
+    }
+
+    .coupon {
+        transition: opacity .2s ease, transform .2s ease;
+    }
+
+    .coupon-close {
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+        padding: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .coupon-close:hover {
+        opacity: .65;
+    }
+
+    .search-empty {
+        display: none !important;
+        margin-top: 12px;
+        color: #64748b;
+        font-size: 14px;
+    }
+
+    @media (max-width: 1150px) {
+        .main-content-width {
+            width: calc(100% - 32px) !important;
+        }
+
+        .hero-image {
+            width: 100% !important;
+            height: auto !important;
+            min-height: 280px;
+            object-fit: cover;
+        }
+
+        .projects-area {
+            height: auto !important;
+            display: grid !important;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .project-card {
+            position: static !important;
+            width: 100% !important;
+            height: 301px !important;
+            margin: 0 !important;
+        }
+
+        .project-card.featured {
+            grid-column: span 2;
+        }
+    }
+
+    @media (max-width: 768px) {
+        nav .container-fluid {
+            padding-left: 16px !important;
+            padding-right: 16px !important;
+        }
+
+        nav .d-flex.gap-4.mx-auto {
+            gap: 12px !important;
+        }
+
+        nav .d-flex.align-items-center.gap-4 {
+            gap: 12px !important;
+        }
+
+        .coupon {
+            width: calc(100% - 32px) !important;
+            height: auto !important;
+            min-height: 54px;
+            padding: 10px 16px;
+        }
+
+        .coupon p {
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .search-area {
+            padding: 24px !important;
+        }
+
+        .talents-wrapper {
+            width: calc(100% - 32px) !important;
+        }
+
+        .talents-list {
+            flex-direction: column !important;
+        }
+
+        .talent-card {
+            width: 100% !important;
+        }
+
+        .projects-area {
+            grid-template-columns: 1fr;
+        }
+
+        .project-card.featured {
+            grid-column: span 1;
+        }
+    }
+</style>
+
 </head>
 
 <body style="padding: 0; margin: 0; background-color: #F9F9FF;">
@@ -77,23 +240,23 @@
     
     <main style="padding: 40px 0 ; display: flex; flex-direction: column; align-items: center;">
         
-            <!-- É o cupom :P -->
-           <div style="width: 75%; height: 54px; background-color: lightblue ;  display: flex; justify-content: center; align-items: center; border-radius: 40px">
-           <p style="margin: 0;" >Get 20% off your first payment for design and development services on Dribbble.  Use code WELCOME20 🎉</p>
-           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" aria-hidden="true" class="icon ">
+            <!-- Aviso promocional -->
+           <div class="coupon" style="width: 75%; height: 54px; background-color: lightblue ;  display: flex; justify-content: center; align-items: center; border-radius: 40px">
+           <p style="margin: 0;" >Get 20% off your first payment for design and development services on Dribbble.  Use code WELCOME20</p>
+           <button type="button" class="coupon-close" aria-label="Fechar aviso"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" aria-hidden="true" class="icon ">
   <path d="M6.34314 4.22183C5.75736 3.63604 4.80761 3.63604 4.22182 4.22183C3.63604 4.80761 3.63604 5.75736 4.22182 6.34315L9.87868 12L4.22182 17.6569C3.63604 18.2426 3.63604 19.1924 4.22182 19.7782C4.80761 20.364 5.75736 20.364 6.34314 19.7782L12 14.1213L17.6569 19.7782C18.2426 20.364 19.1924 20.364 19.7782 19.7782C20.364 19.1924 20.364 18.2426 19.7782 17.6569L14.1213 12L19.7782 6.34315C20.364 5.75736 20.364 4.80761 19.7782 4.22183C19.1924 3.63604 18.2426 3.63604 17.6569 4.22183L12 9.87868L6.34314 4.22183Z" fill="currentColor"></path>
-</svg>
+</svg></button>
            </div>
 </div>
 <br>
           <div style="text-align: center;">
             <!-- <i style="font-size: 45px; color: #2563eb;" class="bi bi-arrow-left-circle"></i> -->
-            <img src="https://pairroxz.com/blog/wp-content/uploads/2023/01/What-is-uiux-Design-20-Best-uiux-Design-Examples-in-2023.png" alt="EasyMarketing" style="width: 1014px; height: 400px; border-radius: 30px;">
+            <img class="hero-image" src="https://pairroxz.com/blog/wp-content/uploads/2023/01/What-is-uiux-Design-20-Best-uiux-Design-Examples-in-2023.png" alt="EasyMarketing" style="width: 1014px; height: 400px; border-radius: 30px;">
           </div>
 <br>
 
-<!-- INÍCIO DO COMPONENTE DE BUSCA (O que fica embaixo da imagem que deu errado KKKKKKKKKKKKK) -->
-<div style="width: 100%; max-width: 1104px; background: #ffffff linear-gradient(135deg, rgba(255,255,255,0) 60%, rgba(210,230,255,0.7) 100%); border: 1px solid #e2e8f0; border-radius: 12px; padding: 36px 40px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03); font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; box-sizing: border-radius; margin-bottom: 30px;">
+<!-- Componente de busca -->
+<div class="search-area main-content-width" style="width: 100%; max-width: 1104px; background: #ffffff linear-gradient(135deg, rgba(255,255,255,0) 60%, rgba(210,230,255,0.7) 100%); border: 1px solid #e2e8f0; border-radius: 12px; padding: 36px 40px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03); font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; box-sizing: border-box; margin-bottom: 30px;">
 
   <!-- Título -->
   <div style="font-size: 22px; font-weight: 600; color: #1e293b; margin-bottom: 8px;">
@@ -121,28 +284,28 @@
     />
 
     <!-- Botão Azul -->
-    <div style="background: #0052cc; border: none; width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ffffff; flex-shrink: 0; cursor: pointer;">
+    <button type="button" class="search-button" aria-label="Pesquisar" style="background: #0052cc; border: none; width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ffffff; flex-shrink: 0; cursor: pointer;">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
         <line x1="5" y1="12" x2="19" y2="12"></line>
         <polyline points="12 5 19 12 12 19"></polyline>
-      </svg>
+      </svg></button>
     </div>
   </div>
 
   <!-- Container de Tags -->
   <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px;">
     <span style="font-size: 13px; font-weight: 700; color: #475569; margin-right: 4px;">Popular:</span>
-    <div style="background: #f1f5f9; color: #334155; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 600; font-family: monospace;">UX/UI Designers</div>
-    <div style="background: #f1f5f9; color: #334155; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 600; font-family: monospace;">Graphic Designers</div>
-    <div style="background: #f1f5f9; color: #334155; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 600; font-family: monospace;">Brand Designers</div>
-    <div style="background: #f1f5f9; color: #334155; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 600; font-family: monospace;">Product Designers</div>
-    <div style="background: #f1f5f9; color: #334155; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 600; font-family: monospace;">Motion Designers</div>
+    <button type="button" class="popular-tag" data-search="UX/UI Designers" style="background: #f1f5f9; color: #334155; border: 0; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 600; font-family: monospace;">UX/UI Designers</button>
+    <button type="button" class="popular-tag" data-search="Graphic Designers" style="background: #f1f5f9; color: #334155; border: 0; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 600; font-family: monospace;">Graphic Designers</button>
+    <button type="button" class="popular-tag" data-search="Brand Designers" style="background: #f1f5f9; color: #334155; border: 0; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 600; font-family: monospace;">Brand Designers</button>
+    <button type="button" class="popular-tag" data-search="Product Designers" style="background: #f1f5f9; color: #334155; border: 0; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 600; font-family: monospace;">Product Designers</button>
+    <button type="button" class="popular-tag" data-search="Motion Designers" style="background: #f1f5f9; color: #334155; border: 0; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 600; font-family: monospace;">Motion Designers</button>
   </div>
 
 </div>
 
 <!-- DIV PRINCIPAL (Div pai, o quadrado maior que pega todos da parte DESTAQUEEE) -->
-<div style="background-color: #f8f9fa; border: 1px solid #e2e8f0; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 20px; font-family: sans-serif; width: 100%; max-width: 1000px; box-sizing: border-radius; margin-bottom: 30px;" >
+<div class="talents-wrapper main-content-width" style="background-color: #f8f9fa; border: 1px solid #e2e8f0; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 20px; font-family: sans-serif; width: 100%; max-width: 1000px; box-sizing: border-box; margin-bottom: 30px;" >
 
   <!-- Div dos textos que ficam encima as divs que ficam as informações das pessoas -->
   <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
@@ -151,16 +314,16 @@
   </div>
 
   <!-- div dos dois quadrados onde irão ficar a pessoa que ficou em destaque e a segunda pessoa que ficou em destaque (Lado a Lado) -->
-  <div style="display: flex; gap: 16px; align-items: stretch; flex-wrap: wrap;">
+  <div class="talents-list" style="display: flex; gap: 16px; align-items: stretch; flex-wrap: wrap;">
 
-    <!-- primeiro quadrado/o direito (no figma é a Alex Rivers :P )-->
-    <div style="background-color: #eff6ff; border: 1px solid #bfdbfe; border-radius: 12px; padding: 20px; width: 280px; display: flex; flex-direction: column; justify-content: space-between; gap: 20px;">
+    <!-- Primeiro card de destaque -->
+    <div class="talent-card" style="background-color: #eff6ff; border: 1px solid #bfdbfe; border-radius: 12px; padding: 20px; width: 280px; display: flex; flex-direction: column; justify-content: space-between; gap: 20px;">
       
       <!-- div da Foto e dos textos onde ficam as informações -->
       <div style="display: flex; align-items: center; gap: 12px;">
         <!-- Div da Foto Redonda da pesssoa da esquerda-->
         <div style="width: 52px; height: 52px; border-radius: 50%; overflow: hidden; flex-shrink: 0;">
-          <img src="https://img.freepik.com/fotos-gratis/feliz-bonito-mulher-jovem-posar-camera-em-parque-cidade_1262-19158.jpg" alt="Alex Rivers" style="width: 100%; height: 100%; object-fit: cover;">
+          <img src="https://img.freepik.com/fotos-gratis/feliz-bonito-mulher-jovem-posar-camera-em-parque-cidade_1262-19158.jpg" alt="Foto de Alex Rivers" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
         <!-- Div dos textos do quadrado da esquerda -->
         <div>
@@ -171,20 +334,20 @@
 
       <!--div onde ficam as visualizações do quadrado da esquerda -->
       <div style="display: flex; align-items: center; gap: 8px; color: #1d4ed8; font-size: 14px; font-weight: 600;">
-        <span>👁</span>
+        <i class="bi bi-eye"></i>
         <span>142 visualizações hoje</span>
       </div>
 
     </div>
 
-    <!-- div do quadrado da direita ( ou Sarah Chen, no figma kkk) -->
-    <div style="background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; width: 280px; display: flex; flex-direction: column; justify-content: space-between; gap: 20px;">
+    <!-- Segundo card de destaque -->
+    <div class="talent-card" style="background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; width: 280px; display: flex; flex-direction: column; justify-content: space-between; gap: 20px;">
       
       <!-- Div dos textos que ficam encima as divs que ficam as informações das pessoas -->
       <div style="display: flex; align-items: center; gap: 12px;">
         <!-- Div da Foto Redonda da pesssoa da direita-->
        <div style="width: 52px; height: 52px; border-radius: 50%; overflow: hidden; flex-shrink: 0;">
-          <img src="https://as1.ftcdn.net/v2/jpg/06/78/62/46/1000_F_678624657_yIuAFR8cjLXG1HWVLz42bYDafXQ73a8C.jpg" alt="Alex Rivers" style="width: 100%; height: 100%; object-fit: cover;">
+          <img src="https://as1.ftcdn.net/v2/jpg/06/78/62/46/1000_F_678624657_yIuAFR8cjLXG1HWVLz42bYDafXQ73a8C.jpg" alt="Foto de Sarah Chen" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
         <div>
           <h3 style="margin: 0; font-size: 16px; color: #0f172a; font-weight: 700;">Sarah Chen</h3>
@@ -194,7 +357,7 @@
 
       <!--div onde ficam as visualizações do quadrado da direita -->
       <div style="display: flex; align-items: center; gap: 8px; color: #334155; font-size: 14px; font-weight: 600;">
-        <span>📈</span>
+        <i class="bi bi-graph-up-arrow"></i>
         <span>98 visualizações hoje</span>
       </div>
 
@@ -204,11 +367,13 @@
 
 </div>
 
+<div class="search-empty main-content-width">Nenhum projeto encontrado para essa busca.</div>
+
 <!-- DIV PAI PRINCIPAL -->
-<div style="width: 1104px; height: 826px; background-color: #F9F9FF; border-radius: 16px; position: relative; padding: 20px; box-sizing: border-box;">
+<div class="projects-area main-content-width" style="width: 1104px; height: 826px; background-color: #F9F9FF; border-radius: 16px; position: relative; padding: 20px; box-sizing: border-box;">
 
   <!-- ==================== CARD 1 ==================== -->
-  <div style="position: absolute; top: 20px; left: 20px; width: 728px; height: 417px; background-color: black; border-radius: 16px; overflow: hidden; margin-left: -20px; margin-top: -20px;">
+  <div class="project-card featured" data-search="UX/UI Designers Product Designers OpenGest Gestão de Negócios" style="position: absolute; top: 20px; left: 20px; width: 728px; height: 417px; background-color: black; border-radius: 16px; overflow: hidden; margin-left: -20px; margin-top: -20px;">
 
     <img 
       src="https://www.unsell.design/wp-content/uploads/2023/08/633617353_Template-Featured-image.jpg"
@@ -252,7 +417,7 @@
 
 
   <!-- ==================== CARD 2 ==================== -->
-  <div style="position: absolute; top: 20px; left: 760px; width: 324px; height: 417px; background-color: white; border-radius: 16px; overflow: hidden; margin-left: 20px; margin-top: -20px;">
+  <div class="project-card" data-search="UX/UI Designers Product Designers Segurança de Dados COMPLIACE AVANT" style="position: absolute; top: 20px; left: 760px; width: 324px; height: 417px; background-color: white; border-radius: 16px; overflow: hidden; margin-left: 20px; margin-top: -20px;">
 
     <img 
       src="https://www.unsell.design/wp-content/uploads/2024/05/764496405_Template-Featured-image.jpg"
@@ -284,7 +449,7 @@
 
 
   <!-- ==================== CARD 3 ==================== -->
-  <div style="position: absolute; top: 437px; left: 0px; width: 352px; height: 301px; background-color: white; border-radius: 12px; overflow: hidden;">
+  <div class="project-card" data-search="Graphic Designers Motion Designers 3D Art Illustration DRA Soluções" style="position: absolute; top: 437px; left: 0px; width: 352px; height: 301px; background-color: white; border-radius: 12px; overflow: hidden;">
 
     <!-- Imagem do Card 3 -->
     <img 
@@ -322,7 +487,7 @@
 
 
   <!-- ==================== CARD 4 ==================== -->
-  <div style="position: absolute; top: 437px; left: 376px; width: 352px; height: 301px; background-color: white; border-radius: 12px; overflow: hidden;">
+  <div class="project-card" data-search="Brand Designers Graphic Designers Branding Visual Identity Breath Nature" style="position: absolute; top: 437px; left: 376px; width: 352px; height: 301px; background-color: white; border-radius: 12px; overflow: hidden;">
 
     <!-- Imagem do Card 4 -->
     <img 
@@ -360,7 +525,7 @@
 
 
   <!-- ==================== CARD 5 ==================== -->
-  <div style="position: absolute; top: 437px; left: 752px; width: 352px; height: 301px; background-color: white; border-radius: 12px; overflow: hidden;">
+  <div class="project-card" data-search="Brand Designers Graphic Designers Branding Visual Identity Trivex Brand System" style="position: absolute; top: 437px; left: 752px; width: 352px; height: 301px; background-color: white; border-radius: 12px; overflow: hidden;">
 
     <!-- Imagem do Card 5 -->
     <img 
@@ -409,7 +574,7 @@
     margin-top: -50px;
 ">
 
-    <button style="
+    <button type="button" class="load-more-button" style="
         background-color: white;
         border: 2px solid #0066cc;
         border-radius: 30px;
@@ -424,7 +589,7 @@
         cursor: pointer;
     ">
         Carregar mais projetos
-        <span style="margin-left: 10px; margin-bottom: 5px; font-weight: bold;">⌄</span>
+        <i class="bi bi-chevron-down" style="margin-left: 10px;"></i>
     </button>
 
 </div>
@@ -451,5 +616,98 @@
   </p>
 </footer>
     
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const coupon = document.querySelector(".coupon");
+    const closeCoupon = document.querySelector(".coupon-close");
+
+    if (closeCoupon && coupon) {
+        closeCoupon.addEventListener("click", function () {
+            coupon.style.opacity = "0";
+            coupon.style.transform = "translateY(-8px)";
+
+            setTimeout(function () {
+                coupon.style.display = "none";
+            }, 200);
+        });
+    }
+
+    const input = document.querySelector('input[type="text"]');
+    const searchButton = document.querySelector(".search-button");
+    const tags = document.querySelectorAll(".popular-tag");
+    const cards = document.querySelectorAll(".project-card");
+    const emptyMessage = document.querySelector(".search-empty");
+
+    if (emptyMessage) {
+        emptyMessage.style.display = "none";
+    }
+
+    function searchProjects() {
+        if (!input || cards.length === 0) {
+            return;
+        }
+
+        const term = input.value.trim().toLowerCase();
+        let visibleCards = 0;
+        const searching = term.length > 0;
+
+        cards.forEach(function (card) {
+            const content = (card.textContent + " " + (card.dataset.search || "")).toLowerCase();
+            const visible = !searching || content.includes(term);
+
+            card.style.display = visible ? "" : "none";
+
+            if (visible) {
+                visibleCards++;
+            }
+        });
+
+        if (emptyMessage) {
+            emptyMessage.style.display = searching && visibleCards === 0 ? "block" : "none";
+        }
+    }
+
+
+    if (searchButton) {
+        searchButton.addEventListener("click", searchProjects);
+    }
+
+    if (input) {
+        input.addEventListener("input", function () {
+            if (input.value.trim() === "") {
+                searchProjects();
+            }
+        });
+
+        input.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                searchProjects();
+            }
+        });
+    }
+
+    tags.forEach(function (tag) {
+        tag.addEventListener("click", function () {
+            if (input) {
+                input.value = tag.dataset.search;
+                input.focus();
+                searchProjects();
+            }
+        });
+    });
+
+    const loadMoreButton = document.querySelector(".load-more-button");
+
+    if (loadMoreButton) {
+        loadMoreButton.addEventListener("click", function () {
+            this.innerHTML = 'Todos os projetos já estão carregados <i class="bi bi-check2" style="margin-left: 8px;"></i>';
+            this.disabled = true;
+            this.style.cursor = "default";
+        });
+    }
+});
+</script>
+
 </body>
 </html> 
