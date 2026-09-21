@@ -93,6 +93,55 @@
         font-size: 14px;
     }
 
+    #homeCarousel {
+        border-radius: 30px;
+        position: relative;
+    }
+
+    #homeCarousel .carousel-control-prev,
+    #homeCarousel .carousel-control-next {
+        width: 42px;
+        height: 42px;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 1;
+        background-color: white;
+        border: 1px solid #dbe3ee;
+        border-radius: 50%;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    #homeCarousel .carousel-control-prev {
+        left: -55px;
+    }
+
+    #homeCarousel .carousel-control-next {
+        right: -55px;
+    }
+
+    #homeCarousel .carousel-control-prev:hover,
+    #homeCarousel .carousel-control-next:hover {
+        background-color: #f1f5f9;
+    }
+
+    #homeCarousel .carousel-control-prev-icon,
+    #homeCarousel .carousel-control-next-icon {
+        display: none;
+    }
+
+    #homeCarousel .carousel-control-prev i,
+    #homeCarousel .carousel-control-next i {
+        color: #0f172a;
+        font-size: 18px;
+    }
+
+    #homeCarousel .carousel-item img {
+        display: block;
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+
     @media (max-width: 1150px) {
         .main-content-width {
             width: calc(100% - 32px) !important;
@@ -103,6 +152,10 @@
             height: auto !important;
             min-height: 280px;
             object-fit: cover;
+        }
+
+        #homeCarousel .carousel-item img {
+            height: 320px !important;
         }
 
         .projects-area {
@@ -125,6 +178,14 @@
     }
 
     @media (max-width: 768px) {
+        #homeCarousel .carousel-control-prev {
+            left: 8px;
+        }
+
+        #homeCarousel .carousel-control-next {
+            right: 8px;
+        }
+
         nav .container-fluid {
             padding-left: 16px !important;
             padding-right: 16px !important;
@@ -249,9 +310,42 @@
            </div>
 </div>
 <br>
-          <div style="text-align: center;">
-            <!-- <i style="font-size: 45px; color: #2563eb;" class="bi bi-arrow-left-circle"></i> -->
-            <img class="hero-image" src="https://pairroxz.com/blog/wp-content/uploads/2023/01/What-is-uiux-Design-20-Best-uiux-Design-Examples-in-2023.png" alt="EasyMarketing" style="width: 1014px; height: 400px; border-radius: 30px;">
+          <div style="text-align: center; width: 100%;">
+            <div id="homeCarousel" class="carousel slide mx-auto" data-bs-ride="carousel" data-bs-interval="4500" style="width: 1014px; max-width: 100%;">
+
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Imagem 1"></button>
+                <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1" aria-label="Imagem 2"></button>
+                <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2" aria-label="Imagem 3"></button>
+              </div>
+
+              <div class="carousel-inner" style="border-radius: 30px; overflow: hidden;">
+
+                <div class="carousel-item active">
+                  <img class="hero-image d-block w-100" src="https://pairroxz.com/blog/wp-content/uploads/2023/01/What-is-uiux-Design-20-Best-uiux-Design-Examples-in-2023.png" alt="Exemplos de UI e UX" style="height: 400px; object-fit: cover;">
+                </div>
+
+                <div class="carousel-item">
+                  <img class="hero-image d-block w-100" src="https://www.unsell.design/wp-content/uploads/2023/08/633617353_Template-Featured-image.jpg" alt="Projeto de design em destaque" style="height: 400px; object-fit: cover;">
+                </div>
+
+                <div class="carousel-item">
+                  <img class="hero-image d-block w-100" src="https://images.ctfassets.net/ooa29xqb8tix/22yB0fxGdusPYvjeHt0tIc/5e8425645473fbfc465de26fff504c89/Metadata_the_Figma_Handbook.jpg" alt="Projeto relacionado a Figma" style="height: 400px; object-fit: cover;">
+                </div>
+
+              </div>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+                <i class="bi bi-chevron-left" aria-hidden="true"></i>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+
+              <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+                <i class="bi bi-chevron-right" aria-hidden="true"></i>
+                <span class="visually-hidden">Próxima</span>
+              </button>
+
+            </div>
           </div>
 <br>
 
@@ -616,6 +710,8 @@
   </p>
 </footer>
     
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
