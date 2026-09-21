@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>EasyMarketing</title>
+    <title>EasyMarketing Home</title>
 
     <!--link dos bootstraps utilizados :P-->
     <!-- Bootstrap -->
@@ -28,28 +28,28 @@
                 EasyMarketing
             </span>
             
+            
             <!-- Menu -->
             <div class="d-flex gap-4 mx-auto">
 
-                <a href="#" class="text-dark text-decoration-none text-center small">
+                <a href="http://localhost/easymarketing/public/" class="text-dark text-decoration-none text-center small">
                     <i class="bi bi-house-fill d-block fs-5"></i>
                     Home
                 </a>
 
-                <a href="#" class="text-dark text-decoration-none text-center small">
+                <a href="http://localhost/easymarketing/public/contratado" class="text-dark text-decoration-none text-center small">
                     <i class="bi bi-people d-block fs-5"></i>
-                    Network
+                    Candidatos
                 </a>
 
-                <a href="#" class="text-dark text-decoration-none text-center small">
+                <a href="http://localhost/easymarketing/public/trabalhos" class="text-dark text-decoration-none text-center small">
                     <i class="bi bi-briefcase d-block fs-5"></i>
-                    Jobs
+                    Trabalhos
                 </a>
-
-                <a href="#" class="text-dark text-decoration-none text-center small">
-                    <i class="bi bi-chat-square-text d-block fs-5"></i>
-                    Messaging
-                </a>
+              <a href="http://localhost/easymarketing/public/empresa" class="d-flex flex-column align-items-center text-dark text-decoration-none text-center small">
+                    <i class="bi bi-building" style="font-size: 20px;"></i>
+                     <span>Empresas</span>
+              </a>
 
             </div>
 

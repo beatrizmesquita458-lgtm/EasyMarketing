@@ -26,28 +26,28 @@
                 EasyMarketing
             </span>
             
+            
             <!-- Menu -->
             <div class="d-flex gap-4 mx-auto">
 
-                <a href="#" class="text-dark text-decoration-none text-center small">
+                <a href="http://localhost/easymarketing/public/" class="text-dark text-decoration-none text-center small">
                     <i class="bi bi-house-fill d-block fs-5"></i>
                     Home
                 </a>
 
-                <a href="#" class="text-dark text-decoration-none text-center small">
+                <a href="http://localhost/easymarketing/public/contratado" class="text-dark text-decoration-none text-center small">
                     <i class="bi bi-people d-block fs-5"></i>
-                    Network
+                    Candidatos
                 </a>
 
-                <a href="#" class="text-dark text-decoration-none text-center small">
+                <a href="http://localhost/easymarketing/public/trabalhos" class="text-dark text-decoration-none text-center small">
                     <i class="bi bi-briefcase d-block fs-5"></i>
-                    Jobs
+                    Trabalhos
                 </a>
-
-                <a href="#" class="text-dark text-decoration-none text-center small">
-                    <i class="bi bi-chat-square-text d-block fs-5"></i>
-                    Messaging
-                </a>
+              <a href="http://localhost/easymarketing/public/empresa" class="d-flex flex-column align-items-center text-dark text-decoration-none text-center small">
+                    <i class="bi bi-building" style="font-size: 20px;"></i>
+                     <span>Empresas</span>
+              </a>
 
             </div>
 
@@ -77,7 +77,7 @@
   <main style="padding: 20px 0; display: flex; flex-direction: column; align-items: center; margin-top: 30px;">
         
     <!-- DIV PAI DE TUDO (Mudado para flex-direction: column) -->
-    <div style="width: 1200px; min-height: 1456px; height: auto; background-color: #0000ff; display: flex; flex-direction: column; gap: 24px; padding: 20px 30px; box-sizing: border-box;">
+    <div style="width: 1200px; min-height: 1650px; height: auto; background-color: #F9F9FF; display: flex; flex-direction: column; gap: 24px; padding: 20px 30px; box-sizing: border-box;">
         
         <!-- PRIMEIRO CARTÃO (David Production) -->
         <div style="width: 100%; height: auto; background-color: #ffffff; display: flex; flex-direction: column; position: relative; border-radius: 8px; overflow: hidden; border: 1px solid #ddd;">
@@ -171,17 +171,111 @@
                 <img src="https://cinemarche.net/wp-content/uploads/2018/10/10017796_h_pc_l.jpg" alt="Brand Guidelines" style="width: 100%; height: 100%; object-fit: cover; display: block;">
             </div>
         </div>
-
     </div>
 
+
+    
 </div>
 
 </div>
+
+
             
         </div>
 
+<!-- CARTÃO PRINCIPAL: VAGAS ABERTAS -->
+<!-- CARTÃO PRINCIPAL: VAGAS ABERTAS -->
+<div style="width: 100%; max-width: 1104px; background-color: #ffffff; border-radius: 12px; border: 1px solid #cbd5e1; padding: 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 16px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+
+    <!-- Cabeçalho: Título + Contador de Vagas -->
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 8px;">
+        <h2 style="font-size: 22px; font-weight: 700; color: #0f172a; margin: 0;">
+            Vagas Abertas
+        </h2>
+        <span style="font-size: 12px; font-weight: 600; color: #334155; background-color: #f1f5f9; padding: 4px 12px; border-radius: 12px;">
+            3 Vagas
+        </span>
+    </div>
+
+    <!-- Vaga 1: Senior Product Designer -->
+    <div style="width: 100%; border: 1px solid #cbd5e1; border-radius: 8px; padding: 16px 20px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; background-color: #ffffff;">
+        <div style="display: flex; align-items: center; gap: 16px;">
+            <!-- Ícone Quadrado -->
+            <div style="width: 48px; height: 48px; background-color: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="bi bi-tools" style="color: #0056D2; font-size: 18px;"></i>
+            </div>
+            <!-- Detalhes da Vaga -->
+            <div style="display: flex; flex-direction: column; gap: 4px;">
+                <span style="font-size: 16px; font-weight: 700; color: #0f172a;">Senior Product Designer</span>
+                <span style="font-size: 13px; font-weight: 500; color: #475569;">Híbrido (São Paulo) &bull; Tempo integral &bull; Há 2 dias</span>
+            </div>
+        </div>
+        <!-- Ícone Guardar / Bookmark -->
+        <i class="bi bi-bookmark" style="font-size: 18px; color: #0f172a; cursor: pointer;"></i>
+    </div>
+
+    <!-- Vaga 2: Desenvolvedor Front-end Pleno -->
+    <div style="width: 100%; border: 1px solid #cbd5e1; border-radius: 8px; padding: 16px 20px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; background-color: #ffffff;">
+        <div style="display: flex; align-items: center; gap: 16px;">
+            <!-- Ícone Quadrado -->
+            <div style="width: 48px; height: 48px; background-color: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="bi bi-code-slash" style="color: #0056D2; font-size: 18px;"></i>
+            </div>
+            <!-- Detalhes da Vaga -->
+            <div style="display: flex; flex-direction: column; gap: 4px;">
+                <span style="font-size: 16px; font-weight: 700; color: #0f172a;">Desenvolvedor Front-end Pleno</span>
+                <span style="font-size: 13px; font-weight: 500; color: #475569;">Remoto &bull; Tempo integral &bull; Há 1 semana</span>
+            </div>
+        </div>
+        <!-- Ícone Guardar / Bookmark -->
+        <i class="bi bi-bookmark" style="font-size: 18px; color: #0f172a; cursor: pointer;"></i>
+    </div>
+
+    <!-- Vaga 3: Analista de Marketing Digital -->
+    <div style="width: 100%; border: 1px solid #cbd5e1; border-radius: 8px; padding: 16px 20px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; background-color: #ffffff;">
+        <div style="display: flex; align-items: center; gap: 16px;">
+            <!-- Ícone Quadrado -->
+            <div style="width: 48px; height: 48px; background-color: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="bi bi-megaphone" style="color: #0056D2; font-size: 18px;"></i>
+            </div>
+            <!-- Detalhes da Vaga -->
+            <div style="display: flex; flex-direction: column; gap: 4px;">
+                <span style="font-size: 16px; font-weight: 700; color: #0f172a;">Analista de Marketing Digital</span>
+                <span style="font-size: 13px; font-weight: 500; color: #475569;">Híbrido (São Paulo) &bull; Tempo integral &bull; Há 2 semanas</span>
+            </div>
+        </div>
+        <!-- Ícone Guardar / Bookmark -->
+        <i class="bi bi-bookmark" style="font-size: 18px; color: #0f172a; cursor: pointer;"></i>
+    </div>
+
+    <!-- Botão Inferior: Mostrar mais vagas -->
+    <button style="width: 100%; height: 44px; background-color: transparent; border: 1px solid #cbd5e1; border-radius: 8px; display: flex; align-items: center; justify-content: center; gap: 6px; cursor: pointer; margin-top: 4px;">
+        <span style="font-size: 13px; font-weight: 600; color: #334155;">Mostrar mais vagas</span>
+        <i class="bi bi-chevron-down" style="font-size: 12px; color: #334155;"></i>
+    </button>
+
+</div>
+
+</div>
     </div>
 </main>
     </main>
+
+     <!-- Parte do rodapé no final do site (JÁ FINALIZADO) -->
+    <footer style="display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 24px 16px; width: 100%; background-color: #f2f2f2; border-top: 1px solid #bab9b9; box-sizing: border-box;">
+  
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+    <a href="#" style="text-decoration: none; color: #333333; font-size: 14px;">About</a>
+    <a href="#" style="text-decoration: none; color: #333333; font-size: 14px;">Accessibility</a>
+    <a href="#" style="text-decoration: none; color: #333333; font-size: 14px;">Help Center</a>
+    <a href="#" style="text-decoration: none; color: #333333; font-size: 14px;">Privacy & Terms</a>
+    <a href="#" style="text-decoration: none; color: #333333; font-size: 14px;">Ad Choices</a>
+    <a href="#" style="text-decoration: none; color: #333333; font-size: 14px;">Advertising</a>
+    <a href="#" style="text-decoration: none; color: #333333; font-size: 14px;">Business Services</a>
+  </div>
+
+  <p style="margin: 0; color: #666666; font-size: 13px; text-align: center;"> &copy; 2024 DesignPro Professional Network
+  </p>
+    </footer>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contratado</title>
+    <title>Candidato</title>
     <!--link dos bootstraps utilizados :P-->
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -21,36 +21,47 @@
                     EasyMarketing
                 </span>
                 
-                <!-- Menu -->
-                <div class="d-flex gap-4 mx-auto">
-                    <a href="#" class="text-dark text-decoration-none text-center small">
-                        <i class="bi bi-house-fill d-block fs-5"></i>
-                        Home
-                    </a>
-                    <a href="#" class="text-dark text-decoration-none text-center small">
-                        <i class="bi bi-people d-block fs-5"></i>
-                        Network
-                    </a>
-                    <a href="#" class="text-dark text-decoration-none text-center small">
-                        <i class="bi bi-briefcase d-block fs-5"></i>
-                        Jobs
-                    </a>
-                    <a href="#" class="text-dark text-decoration-none text-center small">
-                        <i class="bi bi-chat-square-text d-block fs-5"></i>
-                        Messaging
-                    </a>
+              
+            <!-- Menu -->
+            <div class="d-flex gap-4 mx-auto">
+
+                <a href="http://localhost/easymarketing/public/" class="text-dark text-decoration-none text-center small">
+                    <i class="bi bi-house-fill d-block fs-5"></i>
+                    Home
+                </a>
+
+                <a href="http://localhost/easymarketing/public/contratado" class="text-dark text-decoration-none text-center small">
+                    <i class="bi bi-people d-block fs-5"></i>
+                    Candidatos
+                </a>
+
+                <a href="http://localhost/easymarketing/public/trabalhos" class="text-dark text-decoration-none text-center small">
+                    <i class="bi bi-briefcase d-block fs-5"></i>
+                    Trabalhos
+                </a>
+              <a href="http://localhost/easymarketing/public/empresa" class="d-flex flex-column align-items-center text-dark text-decoration-none text-center small">
+                    <i class="bi bi-building" style="font-size: 20px;"></i>
+                     <span>Empresas</span>
+              </a>
+
+            </div>
+
+            <!-- Direita -->
+            <div class="d-flex align-items-center gap-4">
+
+                <i class="bi bi-bell fs-5"></i>
+
+                <i class="bi bi-grid-3x3-gap-fill fs-5"></i>
+
+                <i class="bi bi-play-btn fs-5"></i>
+
+                <div class="border-start" style="height: 30px;"></div>
+
+                <div class="rounded-circle bg-secondary-subtle d-flex align-items-center justify-content-center"
+                     style="width: 32px; height: 32px;">
+                    <i class="bi bi-person"></i>
                 </div>
 
-                <!-- Direita -->
-                <div class="d-flex align-items-center gap-4">
-                    <i class="bi bi-bell fs-5"></i>
-                    <i class="bi bi-grid-3x3-gap-fill fs-5"></i>
-                    <i class="bi bi-play-btn fs-5"></i>
-                    <div class="border-start" style="height: 30px;"></div>
-                    <div class="rounded-circle bg-secondary-subtle d-flex align-items-center justify-content-center" style="width: 32px; height: 32px;">
-                        <i class="bi bi-person"></i>
-                    </div>
-                </div>
             </div>
         </nav>
     </header>
@@ -214,7 +225,7 @@ a real necessidade do usuário.</span>
                     </a>
                 </div>
 
-                <!-- 👇 NOVA DIV ADICIONADA LOGO ABAIXO DO "SOBRE MIM" 👇 -->
+                <!--DIV  -->
 <div style="width: 822px; height: 58px; background-color: white; box-sizing: border-box;">
   <div style="width: 100%; height: 42px; background-color: white; margin-top: 30px; display: flex; justify-content: space-between; align-items: center;">
     <span style="font-family: system-ui, -apple-system, sans-serif; font-size: 24px; font-weight: 700; color: #0f172a; line-height: 1.2; margin-left: 30px">Portfólio em Destaque</span>
@@ -230,7 +241,7 @@ a real necessidade do usuário.</span>
     </div>
   </div>
 </div>
-<!-- 👆 FIM DA NOVA DIV 👆 -->
+<!-- FIM DA DIV -->
 
 <!-- div das imagens -->
  <!-- Container Grid do Portfólio (Largura total útil da coluna direita) -->
