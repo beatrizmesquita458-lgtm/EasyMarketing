@@ -11,6 +11,30 @@
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<style>
+/* ===== ANIMACOES VISIVEIS DO HEADER ===== */
+header{animation:headerEntrada .7s ease both;}
+@keyframes headerEntrada{from{opacity:0;transform:translateY(-25px)}to{opacity:1;transform:translateY(0)}}
+header .navbar{transition:box-shadow .3s ease,background-color .3s ease;}
+header .navbar:hover{box-shadow:0 6px 22px rgba(0,86,210,.10);}
+header .text-primary.fw-bold{display:inline-block;transition:transform .3s ease,letter-spacing .3s ease;}
+header .text-primary.fw-bold:hover{transform:scale(1.06) translateY(-2px);letter-spacing:1px;}
+header nav a{position:relative;transition:color .25s ease,transform .25s ease,background-color .25s ease; border-radius:10px;padding:5px 9px;}
+header nav a:hover{color:#0056D2!important;background:#eef5ff;transform:translateY(-4px);}
+header nav a::after{content:'';position:absolute;left:18%;right:18%;bottom:-2px;height:3px;background:#0056D2;border-radius:4px;transform:scaleX(0);transition:transform .3s ease;}
+header nav a:hover::after{transform:scaleX(1);}
+header nav a i{transition:transform .25s ease;}
+header nav a:hover i{transform:translateY(-3px) scale(1.12);}
+header nav .d-flex.align-items-center.gap-4>i{cursor:pointer;transition:transform .25s ease,color .25s ease,background .25s ease;padding:6px;border-radius:50%;}
+header nav .d-flex.align-items-center.gap-4>i:hover{color:#0056D2;background:#eef5ff;transform:translateY(-3px) scale(1.15);}
+header nav .bi-bell:hover{animation:sino .55s ease;}
+@keyframes sino{0%,100%{transform:rotate(0) scale(1.15)}25%{transform:rotate(-15deg) scale(1.15)}50%{transform:rotate(15deg) scale(1.15)}75%{transform:rotate(-8deg) scale(1.15)}}
+header nav .rounded-circle{transition:transform .3s ease,box-shadow .3s ease;}
+header nav .rounded-circle:hover{transform:scale(1.15);box-shadow:0 0 0 5px rgba(0,86,210,.10);}
+@media(max-width:768px){header nav a{padding:3px 5px}header nav .d-flex.align-items-center.gap-4{gap:10px!important}}
+</style>
+
 </head>
 
 <body style="padding: 0; margin: 0; background-color: #F9F9FF;">
@@ -103,8 +127,8 @@
                     </div>
                     <!-- div dos dois botões que tem ao lado -->
                     <div style="display: flex; gap: 10px;">
-                        <button id="seguirEmpresa" onclick="seguirEmpresa()" style="background-color: #0066cc; color: white; border: none; padding: 10px 20px; border-radius: 20px; font-family: Arial, sans-serif; font-size: 14px; cursor: pointer; transition: all 0.2s ease;">+ Seguir</button>
-                        <a href="https://davidproduction.jp/" target="_blank" rel="noopener noreferrer" style="background-color: #f5f5f5; color: #333; border: 1px solid #ccc; padding: 10px 20px; border-radius: 20px; font-family: Arial, sans-serif; font-size: 14px; text-decoration: none; display: inline-flex; align-items: center; transition: all 0.2s ease;" onmouseover="this.style.backgroundColor='#e9e9e9';" onmouseout="this.style.backgroundColor='#f5f5f5';">Visitar site</a>
+                        <button style="background-color: #0066cc; color: white; border: none; padding: 10px 20px; border-radius: 20px; font-family: Arial, sans-serif; font-size: 14px; cursor: pointer;">+ Seguir</button>
+                        <button style="background-color: #f5f5f5; color: #333; border: 1px solid #ccc; padding: 10px 20px; border-radius: 20px; font-family: Arial, sans-serif; font-size: 14px; cursor: pointer;">Visitar site</button>
                     </div>
                 </div>
 
@@ -133,14 +157,14 @@
 <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
   
   <!-- SEGUNDO CARTÃO (Visualização de Trabalho) -->
-<div id="portfolio" style="width: 100%; height: 600px; background-color: #ffffff; display: flex; flex-direction: column; border-radius: 8px; overflow: hidden; border: 1px solid #ddd; padding: 20px; box-sizing: border-box; justify-content: space-between;">
+<div style="width: 100%; height: 600px; background-color: #ffffff; display: flex; flex-direction: column; border-radius: 8px; overflow: hidden; border: 1px solid #ddd; padding: 20px; box-sizing: border-box; justify-content: space-between;">
     
     <!-- Cabeçalho com Título na esquerda e Link na direita -->
     <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
         <h2 style="font-family: Arial, sans-serif; font-size: 20px; font-weight: 700; color: #0f172a; margin: 0;">
             Visualização de Trabalho
         </h2>
-        <a href="#portfolio" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 600; color: #0056D2; text-decoration: none; display: flex; align-items: center; gap: 4px; transition: all 0.2s ease;" onmouseover="this.style.gap='8px'; this.style.color='#003f9e';" onmouseout="this.style.gap='4px'; this.style.color='#0056D2';">
+        <a href="#" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 600; color: #0056D2; text-decoration: none; display: flex; align-items: center; gap: 4px;">
             Ver todos &rarr;
         </a>
     </div>
@@ -277,19 +301,5 @@
   <p style="margin: 0; color: #666666; font-size: 13px; text-align: center;"> &copy; 2024 DesignPro Professional Network
   </p>
     </footer>
-<script>
-function seguirEmpresa() {
-    const botao = document.getElementById("seguirEmpresa");
-    if (botao.innerText === "+ Seguir") {
-        botao.innerText = "Seguindo";
-        botao.style.backgroundColor = "#198754";
-        botao.style.transform = "scale(1.03)";
-    } else {
-        botao.innerText = "+ Seguir";
-        botao.style.backgroundColor = "#0066cc";
-        botao.style.transform = "scale(1)";
-    }
-}
-</script>
 </body>
 </html>

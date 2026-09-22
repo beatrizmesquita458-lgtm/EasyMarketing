@@ -19,6 +19,146 @@
         scroll-behavior: smooth;
     }
 
+    /* ==================== Animações do Header ==================== */
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        animation: headerAppear .5s ease both;
+    }
+
+    header nav {
+        box-shadow: 0 2px 12px rgba(15, 23, 42, .04);
+    }
+
+    .easy-logo {
+        display: inline-block;
+        transition: transform .25s ease, letter-spacing .25s ease, color .25s ease;
+        cursor: pointer;
+    }
+
+    .easy-logo:hover {
+        transform: translateY(-2px);
+        letter-spacing: .3px;
+        color: #004bb5 !important;
+    }
+
+    .header-menu {
+        align-items: stretch;
+    }
+
+    .header-link {
+        position: relative;
+        min-width: 58px;
+        padding: 5px 7px;
+        border-radius: 10px;
+        transition: color .2s ease, background-color .2s ease, transform .2s ease;
+    }
+
+    .header-link i {
+        transition: transform .2s ease;
+    }
+
+    .header-link::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        border-radius: 2px;
+        background: #0056d2;
+        transform: translateX(-50%);
+        transition: width .25s ease;
+    }
+
+    .header-link:hover {
+        color: #0056d2 !important;
+        background-color: #f4f8ff;
+        transform: translateY(-2px);
+    }
+
+    .header-link:hover i {
+        transform: translateY(-2px) scale(1.08);
+    }
+
+    .header-link:hover::after {
+        width: 28px;
+    }
+
+    .header-link.active {
+        color: #0056d2 !important;
+    }
+
+    .header-link.active::after {
+        width: 28px;
+    }
+
+    .header-action {
+        position: relative;
+        width: 36px;
+        height: 36px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: transform .2s ease, background-color .2s ease, color .2s ease;
+    }
+
+    .header-action:hover {
+        background-color: #f1f6ff;
+        color: #0056d2;
+        transform: translateY(-2px);
+    }
+
+    .header-action:active {
+        transform: scale(.92);
+    }
+
+    .header-profile {
+        transition: transform .25s ease, box-shadow .25s ease;
+        cursor: pointer;
+    }
+
+    .header-profile:hover {
+        transform: scale(1.08);
+        box-shadow: 0 4px 12px rgba(0, 86, 210, .16);
+    }
+
+    .header-bell:hover i {
+        animation: bellWiggle .45s ease;
+    }
+
+    @keyframes headerAppear {
+        from {
+            opacity: 0;
+            transform: translateY(-8px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes bellWiggle {
+        0%, 100% { transform: rotate(0); }
+        25% { transform: rotate(-10deg); }
+        75% { transform: rotate(10deg); }
+    }
+
+    @media (max-width: 768px) {
+        .header-menu {
+            gap: 8px !important;
+        }
+
+        .header-link {
+            min-width: 48px;
+            padding-left: 4px;
+            padding-right: 4px;
+        }
+    }
+
     .interactive-link,
     .icon-action,
     .talent-card,
@@ -248,29 +388,29 @@
             <!--,mas se tivesse, seria bom colocar logo abaixo nessa mensagem. copiar do Logo -->
 
             <!-- LOGO -->
-            <span class="text-primary fw-bold fs-5">
+            <span class="text-primary fw-bold fs-5 easy-logo">
                 EasyMarketing
             </span>
             
             
             <!-- Menu -->
-            <div class="d-flex gap-4 mx-auto">
+            <div class="d-flex gap-4 mx-auto header-menu">
 
-                <a href="http://localhost/easymarketing/public/" class="text-dark text-decoration-none text-center small">
+                <a href="http://localhost/easymarketing/public/" class="text-dark text-decoration-none text-center small header-link active">
                     <i class="bi bi-house-fill d-block fs-5"></i>
                     Home
                 </a>
 
-                <a href="http://localhost/easymarketing/public/contratado" class="text-dark text-decoration-none text-center small">
+                <a href="http://localhost/easymarketing/public/contratado" class="text-dark text-decoration-none text-center small header-link">
                     <i class="bi bi-people d-block fs-5"></i>
                     Candidatos
                 </a>
 
-                <a href="http://localhost/easymarketing/public/trabalhos" class="text-dark text-decoration-none text-center small">
+                <a href="http://localhost/easymarketing/public/trabalhos" class="text-dark text-decoration-none text-center small header-link">
                     <i class="bi bi-briefcase d-block fs-5"></i>
                     Trabalhos
                 </a>
-              <a href="http://localhost/easymarketing/public/empresa" class="d-flex flex-column align-items-center text-dark text-decoration-none text-center small">
+              <a href="http://localhost/easymarketing/public/empresa" class="d-flex flex-column align-items-center text-dark text-decoration-none text-center small header-link">
                     <i class="bi bi-building" style="font-size: 20px;"></i>
                      <span>Empresas</span>
               </a>
@@ -280,15 +420,15 @@
             <!-- Direita -->
             <div class="d-flex align-items-center gap-4">
 
-                <i class="bi bi-bell fs-5"></i>
+                <span class="header-action header-bell" title="Notificações"><i class="bi bi-bell fs-5"></i></span>
 
-                <i class="bi bi-grid-3x3-gap-fill fs-5"></i>
+                <span class="header-action" title="Aplicativos"><i class="bi bi-grid-3x3-gap-fill fs-5"></i></span>
 
-                <i class="bi bi-play-btn fs-5"></i>
+                <span class="header-action" title="Vídeos"><i class="bi bi-play-btn fs-5"></i></span>
 
                 <div class="border-start" style="height: 30px;"></div>
 
-                <div class="rounded-circle bg-secondary-subtle d-flex align-items-center justify-content-center"
+                <div class="rounded-circle bg-secondary-subtle d-flex align-items-center justify-content-center header-profile"
                      style="width: 32px; height: 32px;">
                     <i class="bi bi-person"></i>
                 </div>

@@ -106,6 +106,30 @@
             }
         }
     </style>
+
+<style>
+/* ===== ANIMACOES VISIVEIS DO HEADER ===== */
+header{animation:headerEntrada .7s ease both;}
+@keyframes headerEntrada{from{opacity:0;transform:translateY(-25px)}to{opacity:1;transform:translateY(0)}}
+header .navbar{transition:box-shadow .3s ease,background-color .3s ease;}
+header .navbar:hover{box-shadow:0 6px 22px rgba(0,86,210,.10);}
+header .text-primary.fw-bold{display:inline-block;transition:transform .3s ease,letter-spacing .3s ease;}
+header .text-primary.fw-bold:hover{transform:scale(1.06) translateY(-2px);letter-spacing:1px;}
+header nav a{position:relative;transition:color .25s ease,transform .25s ease,background-color .25s ease; border-radius:10px;padding:5px 9px;}
+header nav a:hover{color:#0056D2!important;background:#eef5ff;transform:translateY(-4px);}
+header nav a::after{content:'';position:absolute;left:18%;right:18%;bottom:-2px;height:3px;background:#0056D2;border-radius:4px;transform:scaleX(0);transition:transform .3s ease;}
+header nav a:hover::after{transform:scaleX(1);}
+header nav a i{transition:transform .25s ease;}
+header nav a:hover i{transform:translateY(-3px) scale(1.12);}
+header nav .d-flex.align-items-center.gap-4>i{cursor:pointer;transition:transform .25s ease,color .25s ease,background .25s ease;padding:6px;border-radius:50%;}
+header nav .d-flex.align-items-center.gap-4>i:hover{color:#0056D2;background:#eef5ff;transform:translateY(-3px) scale(1.15);}
+header nav .bi-bell:hover{animation:sino .55s ease;}
+@keyframes sino{0%,100%{transform:rotate(0) scale(1.15)}25%{transform:rotate(-15deg) scale(1.15)}50%{transform:rotate(15deg) scale(1.15)}75%{transform:rotate(-8deg) scale(1.15)}}
+header nav .rounded-circle{transition:transform .3s ease,box-shadow .3s ease;}
+header nav .rounded-circle:hover{transform:scale(1.15);box-shadow:0 0 0 5px rgba(0,86,210,.10);}
+@media(max-width:768px){header nav a{padding:3px 5px}header nav .d-flex.align-items-center.gap-4{gap:10px!important}}
+</style>
+
 </head>
 
 <body style="padding: 0; margin: 0; background-color: #F9F9FF;">
