@@ -127,8 +127,8 @@ header nav .rounded-circle:hover{transform:scale(1.15);box-shadow:0 0 0 5px rgba
                     </div>
                     <!-- div dos dois botões que tem ao lado -->
                     <div style="display: flex; gap: 10px;">
-                        <button style="background-color: #0066cc; color: white; border: none; padding: 10px 20px; border-radius: 20px; font-family: Arial, sans-serif; font-size: 14px; cursor: pointer;">+ Seguir</button>
-                        <button style="background-color: #f5f5f5; color: #333; border: 1px solid #ccc; padding: 10px 20px; border-radius: 20px; font-family: Arial, sans-serif; font-size: 14px; cursor: pointer;">Visitar site</button>
+                        <button id="seguirEmpresa" onclick="seguirEmpresa()" style="background-color: #0066cc; color: white; border: none; padding: 10px 20px; border-radius: 20px; font-family: Arial, sans-serif; font-size: 14px; cursor: pointer; transition: all 0.2s ease;">+ Seguir</button>
+                        <a href="https://davidproduction.jp/" target="_blank" rel="noopener noreferrer" style="background-color: #f5f5f5; color: #333; border: 1px solid #ccc; padding: 10px 20px; border-radius: 20px; font-family: Arial, sans-serif; font-size: 14px; text-decoration: none; display: inline-flex; align-items: center; transition: all 0.2s ease;" onmouseover="this.style.backgroundColor='#e9e9e9';" onmouseout="this.style.backgroundColor='#f5f5f5';">Visitar site</a>
                     </div>
                 </div>
 
@@ -157,14 +157,14 @@ header nav .rounded-circle:hover{transform:scale(1.15);box-shadow:0 0 0 5px rgba
 <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
   
   <!-- SEGUNDO CARTÃO (Visualização de Trabalho) -->
-<div style="width: 100%; height: 600px; background-color: #ffffff; display: flex; flex-direction: column; border-radius: 8px; overflow: hidden; border: 1px solid #ddd; padding: 20px; box-sizing: border-box; justify-content: space-between;">
+<div id="portfolio" style="width: 100%; height: 600px; background-color: #ffffff; display: flex; flex-direction: column; border-radius: 8px; overflow: hidden; border: 1px solid #ddd; padding: 20px; box-sizing: border-box; justify-content: space-between;">
     
     <!-- Cabeçalho com Título na esquerda e Link na direita -->
     <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
         <h2 style="font-family: Arial, sans-serif; font-size: 20px; font-weight: 700; color: #0f172a; margin: 0;">
             Visualização de Trabalho
         </h2>
-        <a href="#" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 600; color: #0056D2; text-decoration: none; display: flex; align-items: center; gap: 4px;">
+        <a href="#portfolio" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 600; color: #0056D2; text-decoration: none; display: flex; align-items: center; gap: 4px; transition: all 0.2s ease;" onmouseover="this.style.gap='8px'; this.style.color='#003f9e';" onmouseout="this.style.gap='4px'; this.style.color='#0056D2';">
             Ver todos &rarr;
         </a>
     </div>
@@ -235,7 +235,7 @@ header nav .rounded-circle:hover{transform:scale(1.15);box-shadow:0 0 0 5px rgba
             </div>
         </div>
         <!-- Ícone Guardar / Bookmark -->
-        <i class="bi bi-bookmark" style="font-size: 18px; color: #0f172a; cursor: pointer;"></i>
+        <i class="bi bi-bookmark bookmark-vaga" style="font-size: 18px; color: #0f172a; cursor: pointer; transition: transform .2s ease, color .2s ease;"></i>
     </div>
 
     <!-- Vaga 2: Desenvolvedor Front-end Pleno -->
@@ -252,7 +252,7 @@ header nav .rounded-circle:hover{transform:scale(1.15);box-shadow:0 0 0 5px rgba
             </div>
         </div>
         <!-- Ícone Guardar / Bookmark -->
-        <i class="bi bi-bookmark" style="font-size: 18px; color: #0f172a; cursor: pointer;"></i>
+        <i class="bi bi-bookmark bookmark-vaga" style="font-size: 18px; color: #0f172a; cursor: pointer; transition: transform .2s ease, color .2s ease;"></i>
     </div>
 
     <!-- Vaga 3: Analista de Marketing Digital -->
@@ -269,13 +269,42 @@ header nav .rounded-circle:hover{transform:scale(1.15);box-shadow:0 0 0 5px rgba
             </div>
         </div>
         <!-- Ícone Guardar / Bookmark -->
-        <i class="bi bi-bookmark" style="font-size: 18px; color: #0f172a; cursor: pointer;"></i>
+        <i class="bi bi-bookmark bookmark-vaga" style="font-size: 18px; color: #0f172a; cursor: pointer; transition: transform .2s ease, color .2s ease;"></i>
+    </div>
+
+    <!-- Vagas extras, inicialmente escondidas -->
+    <div id="vagasExtras" style="display: none; flex-direction: column; gap: 16px; width: 100%;">
+        <div style="width: 100%; border: 1px solid #cbd5e1; border-radius: 8px; padding: 16px 20px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; background-color: #ffffff;">
+            <div style="display: flex; align-items: center; gap: 16px;">
+                <div style="width: 48px; height: 48px; background-color: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                    <i class="bi bi-palette" style="color: #0056D2; font-size: 18px;"></i>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 4px;">
+                    <span style="font-size: 16px; font-weight: 700; color: #0f172a;">Motion Designer</span>
+                    <span style="font-size: 13px; font-weight: 500; color: #475569;">Remoto &bull; Tempo integral &bull; Há 3 semanas</span>
+                </div>
+            </div>
+            <i class="bi bi-bookmark bookmark-vaga" style="font-size: 18px; color: #0f172a; cursor: pointer; transition: transform .2s ease, color .2s ease;"></i>
+        </div>
+
+        <div style="width: 100%; border: 1px solid #cbd5e1; border-radius: 8px; padding: 16px 20px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; background-color: #ffffff;">
+            <div style="display: flex; align-items: center; gap: 16px;">
+                <div style="width: 48px; height: 48px; background-color: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                    <i class="bi bi-vector-pen" style="color: #0056D2; font-size: 18px;"></i>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 4px;">
+                    <span style="font-size: 16px; font-weight: 700; color: #0f172a;">Designer de Interfaces</span>
+                    <span style="font-size: 13px; font-weight: 500; color: #475569;">Híbrido (São Paulo) &bull; Tempo integral &bull; Há 1 mês</span>
+                </div>
+            </div>
+            <i class="bi bi-bookmark bookmark-vaga" style="font-size: 18px; color: #0f172a; cursor: pointer; transition: transform .2s ease, color .2s ease;"></i>
+        </div>
     </div>
 
     <!-- Botão Inferior: Mostrar mais vagas -->
-    <button style="width: 100%; height: 44px; background-color: transparent; border: 1px solid #cbd5e1; border-radius: 8px; display: flex; align-items: center; justify-content: center; gap: 6px; cursor: pointer; margin-top: 4px;">
+    <button id="mostrarVagas" type="button" style="width: 100%; height: 44px; background-color: transparent; border: 1px solid #cbd5e1; border-radius: 8px; display: flex; align-items: center; justify-content: center; gap: 6px; cursor: pointer; margin-top: 4px; transition: background-color .2s ease, border-color .2s ease;">
         <span style="font-size: 13px; font-weight: 600; color: #334155;">Mostrar mais vagas</span>
-        <i class="bi bi-chevron-down" style="font-size: 12px; color: #334155;"></i>
+        <i class="bi bi-chevron-down" style="font-size: 12px; color: #334155; transition: transform .2s ease;"></i>
     </button>
 
 </div>
@@ -301,5 +330,50 @@ header nav .rounded-circle:hover{transform:scale(1.15);box-shadow:0 0 0 5px rgba
   <p style="margin: 0; color: #666666; font-size: 13px; text-align: center;"> &copy; 2024 DesignPro Professional Network
   </p>
     </footer>
+<script>
+function seguirEmpresa() {
+    const botao = document.getElementById("seguirEmpresa");
+
+    if (botao.innerText === "+ Seguir") {
+        botao.innerText = "Seguindo";
+        botao.style.backgroundColor = "#198754";
+        botao.style.transform = "scale(1.03)";
+    } else {
+        botao.innerText = "+ Seguir";
+        botao.style.backgroundColor = "#0066cc";
+        botao.style.transform = "scale(1)";
+    }
+}
+
+// Botões de salvar vaga
+document.querySelectorAll(".bookmark-vaga").forEach(function (botao) {
+    botao.addEventListener("click", function () {
+        if (this.classList.contains("bi-bookmark")) {
+            this.classList.remove("bi-bookmark");
+            this.classList.add("bi-bookmark-fill");
+            this.style.color = "#0056D2";
+            this.style.transform = "scale(1.15)";
+        } else {
+            this.classList.remove("bi-bookmark-fill");
+            this.classList.add("bi-bookmark");
+            this.style.color = "#0f172a";
+            this.style.transform = "scale(1)";
+        }
+    });
+});
+
+// Botão Mostrar mais vagas
+const botaoVagas = document.getElementById("mostrarVagas");
+const vagasExtras = document.getElementById("vagasExtras");
+
+if (botaoVagas && vagasExtras) {
+    botaoVagas.addEventListener("click", function () {
+        const abertas = vagasExtras.style.display === "flex";
+        vagasExtras.style.display = abertas ? "none" : "flex";
+        this.querySelector("span").innerText = abertas ? "Mostrar mais vagas" : "Mostrar menos vagas";
+        this.querySelector("i").style.transform = abertas ? "rotate(0deg)" : "rotate(180deg)";
+    });
+}
+</script>
 </body>
 </html>

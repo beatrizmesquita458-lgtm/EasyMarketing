@@ -1,111 +1,16 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Candidato</title>
-
+    <title>Trabalhos Propostos</title>
+    
+    <!--link dos bootstraps utilizados :P-->
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-    <style>
-        button, a, .portfolio-card, .view-button {
-            transition: all 0.2s ease;
-        }
-
-        button:hover, .view-button:hover {
-            transform: translateY(-2px);
-        }
-
-        .portfolio-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 14px rgba(0,0,0,0.10);
-        }
-
-        .view-button:hover {
-            background-color: #0056D2 !important;
-        }
-
-        .view-button:hover span,
-        .view-button:hover i {
-            color: white !important;
-        }
-
-        .curriculo:hover {
-            text-decoration: underline !important;
-        }
-
-
-        .skill {
-            font-size: 12px;
-            font-weight: 500;
-            color: #334155;
-            background-color: #eff6ff;
-            padding: 6px 12px;
-            border: 1px solid #bfdbfe;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .skill:hover {
-            background-color: #dbeafe;
-            border-color: #0056D2;
-            color: #0056D2;
-            transform: translateY(-2px);
-            box-shadow: 0 2px 6px rgba(0,86,210,0.15);
-        }
-
-        @media (max-width: 1100px) {
-            .pagina-principal {
-                width: 95% !important;
-                height: auto !important;
-                flex-direction: column !important;
-                align-items: center !important;
-            }
-
-            .coluna-perfil,
-            .coluna-direita {
-                width: 100% !important;
-                height: auto !important;
-            }
-
-            .coluna-perfil {
-                align-items: center;
-            }
-
-            .sobre-mim,
-            .portfolio-titulo,
-            .portfolio-grid,
-            .botao-projetos {
-                width: 100% !important;
-                margin-left: 0 !important;
-            }
-
-            .portfolio-grid {
-                justify-content: center;
-            }
-        }
-
-        @media (max-width: 700px) {
-            .navbar .container-fluid {
-                padding-left: 15px !important;
-                padding-right: 15px !important;
-            }
-
-            .menu-principal {
-                gap: 12px !important;
-            }
-
-            .area-direita {
-                display: none !important;
-            }
-
-            .portfolio-card {
-                width: 100% !important;
-            }
-        }
-    </style>
 
 <style>
 /* ===== ANIMACOES VISIVEIS DO HEADER ===== */
@@ -131,273 +36,178 @@ header nav .rounded-circle:hover{transform:scale(1.15);box-shadow:0 0 0 5px rgba
 </style>
 
 </head>
-
-<body style="padding: 0; margin: 0; background-color: #F9F9FF;">
-
-<header>
+<body style="padding: 0; margin: 0; background-color: #F9F9FF; min-height: 100vh; display: flex; flex-direction: column;">
+  <header>
     <nav class="navbar bg-white border-bottom" style="height: 70px;">
-        <div class="container-fluid px-5">
-            <span class="text-primary fw-bold fs-5">EasyMarketing</span>
+      <div class="container-fluid px-5">
+        <!-- LOGO -->
+        <span class="text-primary fw-bold fs-5">EasyMarketing</span>
 
-            <div class="d-flex gap-4 mx-auto menu-principal">
+        
+            <!-- Menu -->
+            <div class="d-flex gap-4 mx-auto">
+
                 <a href="http://localhost/easymarketing/public/" class="text-dark text-decoration-none text-center small">
-                    <i class="bi bi-house-fill d-block fs-5"></i>Home
+                    <i class="bi bi-house-fill d-block fs-5"></i>
+                    Home
                 </a>
 
                 <a href="http://localhost/easymarketing/public/contratado" class="text-dark text-decoration-none text-center small">
-                    <i class="bi bi-people d-block fs-5"></i>Candidatos
+                    <i class="bi bi-people d-block fs-5"></i>
+                    Candidatos
                 </a>
 
                 <a href="http://localhost/easymarketing/public/trabalhos" class="text-dark text-decoration-none text-center small">
-                    <i class="bi bi-briefcase d-block fs-5"></i>Trabalhos
+                    <i class="bi bi-briefcase d-block fs-5"></i>
+                    Trabalhos
                 </a>
-
-                <a href="http://localhost/easymarketing/public/empresa" class="d-flex flex-column align-items-center text-dark text-decoration-none text-center small">
+              <a href="http://localhost/easymarketing/public/empresa" class="d-flex flex-column align-items-center text-dark text-decoration-none text-center small">
                     <i class="bi bi-building" style="font-size: 20px;"></i>
-                    <span>Empresas</span>
-                </a>
+                     <span>Empresas</span>
+              </a>
+
             </div>
 
-            <div class="d-flex align-items-center gap-4 area-direita">
-                <i class="bi bi-bell fs-5" style="cursor:pointer;"></i>
-                <i class="bi bi-grid-3x3-gap-fill fs-5" style="cursor:pointer;"></i>
-                <i class="bi bi-play-btn fs-5" style="cursor:pointer;"></i>
+            <!-- Direita -->
+            <div class="d-flex align-items-center gap-4">
+
+                <i class="bi bi-bell fs-5"></i>
+
+                <i class="bi bi-grid-3x3-gap-fill fs-5"></i>
+
+                <i class="bi bi-play-btn fs-5"></i>
+
                 <div class="border-start" style="height: 30px;"></div>
+
                 <div class="rounded-circle bg-secondary-subtle d-flex align-items-center justify-content-center"
                      style="width: 32px; height: 32px;">
                     <i class="bi bi-person"></i>
                 </div>
+
             </div>
-        </div>
+      </div>
     </nav>
-</header>
+  </header>
 
-<main style="padding: 40px 0; display: flex; flex-direction: column; align-items: center;">
+  <!-- Conteúdo Principal (Background: #F9F9FF) -->
+  <main style="flex: 1; padding: 32px 0;">
+    
+    <!-- CONTAINER PAI DAS INFORMAÇÕES (Fundo Branco: #FFFFFF) -->
+    <div style="width: 1080px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); display: flex; flex-direction: column; align-items: center; margin: 0 auto; padding: 24px; box-sizing: border-box;">
+      
+      <!-- HEADER DA VAGA (Empresa / Título) -->
+      <div style="width: 1040px; height: 96px; display: flex; align-items: center; position: relative;">
+        <div style="width: 100%; height: 96px; background-color: #fff; display: flex; align-items: center; gap: 16px; padding: 0 20px; border-radius: 8px; box-sizing: border-box;">
+          <!-- LOGO -->
+          <div style="width: 60px; height: 60px; border-radius: 6px; overflow: hidden; flex-shrink: 0; background-color: white; display: flex; align-items: center; justify-content: center;">
+            <img src="https://img.freepik.com/vetores-premium/modelo-de-logotipo-de-empresa-de-tipo-minimalista_1283348-42181.jpg" alt="Logo" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
 
-<div class="pagina-principal" style="width: 1200px; min-height: 1456px; background-color: #F9F9FF; display: flex; align-items: flex-start; gap: 30px; padding: 20px 30px 0 30px; box-sizing: border-box; margin-top: -40px;">
-
-    <!-- COLUNA DO PERFIL -->
-    <div class="coluna-perfil" style="width: 258px; background-color: #F9F9FF; display: flex; flex-direction: column; flex-shrink: 0;">
-
-        <div style="width: 258px; min-height: 380px; background-color: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-            <div style="width: 100%; height: 90px; background-color: #0066fe;"></div>
-
-            <div style="padding: 0 16px; position: relative;">
-                <img src="https://img.freepik.com/fotos-premium/linda-mulher-sorridente-digitando-no-notebook-trabalhando-on-line-usando-o-computador-portatil-feminino-sentado-na-varanda-do-terraco_246930-2904.jpg"
-                     alt="Foto de perfil"
-                     style="width: 72px; height: 72px; border-radius: 50%; border: 3px solid white; object-fit: cover; margin-top: -36px; display: block;">
+          <!-- TEXTOS -->
+          <div style="display: flex; flex-direction: column; justify-content: center; gap: 2px;">
+            <h2 style="margin: 0; font-size: 20px; font-weight: bold; color: #222222; line-height: 1.2;">Designer Gráfico</h2>
+            <span style="font-size: 13px; color: #222222; line-height: 1.2;">TechNova Studios • São Paulo, SP, Brasil</span>
+            <div style="display: flex; align-items: center; gap: 4px; font-size: 11px; color: #222; line-height: 1.2;">
+              <span>Há 2 dias</span>
+              <span>•</span>
+              <span style="color: #222222; font-weight: bold;">⚡ Seja um dos 25 primeiros</span>
             </div>
+          </div>
+        </div>
+      </div>
 
-            <div style="display: flex; flex-direction: column; justify-content: center; gap: 2px; padding: 0 16px; margin-top: 8px;">
-                <span style="font-family: system-ui, sans-serif; font-size: 16px; font-weight: 700; color: #0f172a; line-height: 1.2;">Marina Magalhães</span>
+      <!-- fotos dos designs (Avatares) -->
+      <div style="width: 1040px; height: 48px; display: flex; align-items: center; gap: 12px; margin-top: 20px; background-color: #F0F3FF">
+        <div style="display: flex; align-items: center;">
+          <img src="https://i.pinimg.com/originals/6f/3c/4b/6f3c4b64a713ca97c08b8b9e0ccda625.jpg" alt="Pessoa 1" style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid white; object-fit: cover;">
+          <img src="https://img.freepik.com/fotos-premium/foto-de-uma-mulher-seria-uma-mulher-de-negocios-vestida-com-roupa-formal-sentada-na-mesa-e-trabalhando-em-um-laptop-no-escritorio-isolada-sobre-uma-parede-branca_171337-98096.jpg?w=2000" alt="Pessoa 2" style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid white; object-fit: cover; margin-left: -12px;">
+        </div>
+        <p style="margin: 0; font-size: 15px; font-weight: 500; color: #4b4a4a;">Veja quem a OpenGest contratou para esse cargo</p>
+      </div>
 
-                <p style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 500; color: #475569; margin: 4px 0 0; line-height: 1.3;">
-                    Senior UI/UX Designer & Art Director
-                </p>
+      <!-- AÇOES (Candidatar-se + Salvar) -->
+      <div style="width: 1040px; height: 40px; display: flex; align-items: center; margin-top: 16px;">
+        <div style="display: flex; align-items: center; gap: 24px; font-family: system-ui, -apple-system, sans-serif;">
+          <a href="https://seu-link-aqui.com" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; color: #0f172a; text-decoration: none; font-size: 15px; font-weight: 600;">
+            <span>Candidatar-se</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </a>
 
-                <div style="display: flex; align-items: center; gap: 4px; margin-top: 12px;">
-                    <i class="bi bi-geo-alt" style="font-size: 16px; color: #475569;"></i>
-                    <span style="font-size: 11px; font-weight: 500; color: #475569;">São Paulo, Brasil</span>
-                </div>
+          <button type="button" style="background: none; border: none; padding: 0; color: #0f172a; font-size: 15px; font-weight: 600; cursor: pointer;">
+            Salvar
+          </button>
+        </div>
+      </div>
 
-                <div style="display: flex; flex-direction: column; gap: 8px; width: 100%; margin-top: 18px;">
-                    <button id="contratarBtn" style="width: 100%; height: 36px; background-color: #0056D2; border: none; border-radius: 12px; display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer;">
-                        <i class="bi bi-briefcase" style="color: #ffffff; font-size: 16px;"></i>
-                        <span style="font-size: 14px; font-weight: 600; color: #ffffff;">Contratar</span>
-                    </button>
+      <!-- LINHA DIVISORIA -->
+      <div style="width: 1040px; height: 1px; background-color: #e2e8f0; margin-top: 16px;"></div>
 
-                    <a id="mensagemBtn" href="https://wa.me/5511999999999?text=Olá%20Marina!%20Gostaria%20de%20conversar%20sobre%20uma%20oportunidade%20profissional." target="_blank" rel="noopener noreferrer" style="width: 100%; height: 36px; background-color: transparent; border: 1.5px solid #0056D2; border-radius: 12px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
-                        <span style="font-size: 14px; font-weight: 600; color: #0056D2;">Mensagem</span>
-                    </a>
-                </div>
-            </div>
+      <!-- DESCRICAO DO TRABALHO -->
+      <div style="width: 1040px; display: flex; flex-direction: column; margin-top: 20px;">
+        <h2 style="margin: 0; font-size: 20px; font-weight: bold; color: #111C2D; line-height: 1.2;">Descrição do Trabalho</h2>
+        
+        <div style="width: 1040px; color: #475569; font-size: 14px; line-height: 1.6; margin-top: 12px; font-family: system-ui, -apple-system, sans-serif;">
+          We are looking for a creative Graphic Designer to join our dynamic team. You will be responsible for creating visual concepts, by hand or using computer software, to communicate ideas that inspire, inform, or captivate consumers. Develop the overall layout and production design for…
         </div>
 
-        <div style="width: 258px; height: 192px; background-color: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 16px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; margin-top: 30px;">
-            <div style="width: 100%; display: flex; flex-direction: column; gap: 12px; margin-top: 40px;">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <span style="font-size: 15px; color: #475569;">Projetos concluídos</span>
-                    <span style="font-size: 15px; font-weight: 700; color: #0f172a;">48</span>
-                </div>
+        <!-- BOTÃO MOSTRAR MAIS -->
+        <div style="width: 1040px; display: flex; margin-top: 12px;">
+          <button id="btn-mostrar-mais" onclick="alternarConteudo()" type="button" style="display: inline-flex; align-items: center; justify-content: center; gap: 6px; width: fit-content; background-color: #f1f5f9; color: #0f172a; border: 1px solid #cbd5e1; border-radius: 15px; padding: 6px 14px; font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.2s ease; font-family: system-ui, -apple-system, sans-serif;">
+            <span id="texto-botao">Mostrar mais</span>
+            <svg id="icone-seta" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="transition: transform 0.2s ease;">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
 
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <span style="font-size: 15px; color: #475569;">Taxa de sucesso</span>
-                    <span style="font-size: 15px; font-weight: 700; color: #0056D2;">98%</span>
-                </div>
-
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <span style="font-size: 15px; color: #475569;">Disponibilidade</span>
-                    <span style="font-size: 15px; font-weight: 600; color: #16a34a; background-color: #f0fdf4; padding: 2px 8px; border-radius: 12px;">Imediata</span>
-                </div>
-            </div>
+      <!-- INFORMAÇÕES ADICIONAIS (GRID DE 2 COLUNAS) -->
+      <div style="width: 1040px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px 32px; font-family: system-ui, -apple-system, sans-serif; box-sizing: border-box; align-content: center; margin-top: 24px;">
+        <div style="display: flex; flex-direction: column; gap: 2px;">
+          <span style="font-size: 13px; color: #64748b; font-weight: 400; line-height: 1.2;">Nível de experiência</span>
+          <span style="font-size: 15px; color: #0f172a; font-weight: 600; line-height: 1.2;">Pleno-sênior</span>
         </div>
 
-        <div style="width: 258px; height: 230px; background-color: #F9F9FF; margin-top: 30px;">
-            <div style="width: 258px; height:230px; background-color: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); box-sizing: border-box;">
-                <h3 style="font-size: 16px; font-weight: 700; color: #0f172a; margin: 0 0 16px;">Habilidades Principais</h3>
-
-                <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                    <span class="skill">UI Design</span>
-                    <span class="skill">UX Research</span>
-                    <span class="skill">Prototipagem</span>
-                    <span class="skill">Design Systems</span>
-                    <span class="skill">Figma</span>
-                    <span class="skill">Webflow</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- COLUNA DIREITA -->
-    <div class="coluna-direita" style="width: 822px; min-height: 1384px; background-color: #F9F9FF; display: flex; flex-direction: column; gap: 24px; flex-shrink: 0;">
-
-        <div class="sobre-mim" style="width: 822px; min-height: 284px; background-color: white; border-radius: 15px; padding: 30px; box-sizing: border-box;">
-            <div style="font-size: 24px; font-weight: 700; color: #0f172a;">Sobre mim</div>
-
-            <div style="margin-top: 30px;">
-                <span style="font-size: 15px; font-weight: 500; color: #475569; line-height: 1.5;">
-                    Olá! Sou a Mariana, uma designer apaixonada por resolver problemas complexos através de
-                    interfaces limpas, intuitivas e esteticamente agradáveis. Com mais de 8 anos de experiência
-                    trabalhando com startups e grandes corporações, ajudo marcas a traduzirem seus valores em
-                    produtos digitais de alto impacto. Meu foco principal é a interseção entre os objetivos de negócio e
-                    a real necessidade do usuário.
-                </span>
-            </div>
-
-            <a class="curriculo" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; margin-top: 25px;">
-                <span style="font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 600; color: #0056D2;">Ver currículo completo</span>
-                <i class="bi bi-arrow-right" style="color: #0056D2; font-size: 16px;"></i>
-            </a>
+        <div style="display: flex; flex-direction: column; gap: 2px;">
+          <span style="font-size: 13px; color: #64748b; font-weight: 400; line-height: 1.2;">Tipo de emprego</span>
+          <span style="font-size: 15px; color: #0f172a; font-weight: 600; line-height: 1.2;">Tempo integral</span>
         </div>
 
-        <div class="portfolio-titulo" style="width: 822px; height: 58px; background-color: white; box-sizing: border-box;">
-            <div style="width: 100%; height: 42px; background-color: white; margin-top: 30px; display: flex; justify-content: space-between; align-items: center;">
-                <span style="font-size: 24px; font-weight: 700; color: #0f172a; margin-left: 30px;">Portfólio em Destaque</span>
-
-                <div style="display: flex; gap: 8px; margin-right: 12px;">
-                    <div class="view-button" id="gridBtn" style="width: 36px; height: 36px; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
-                        <i class="bi bi-grid-3x3-gap" style="font-size: 18px; color: #1e293b;"></i>
-                    </div>
-
-                    <div class="view-button" id="listBtn" style="width: 36px; height: 36px; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
-                        <i class="bi bi-view-list" style="font-size: 18px; color: #1e293b;"></i>
-                    </div>
-                </div>
-            </div>
+        <div style="display: flex; flex-direction: column; gap: 2px;">
+          <span style="font-size: 13px; color: #64748b; font-weight: 400; line-height: 1.2;">Função</span>
+          <span style="font-size: 15px; color: #0f172a; font-weight: 600; line-height: 1.2;">Design, Arte/Criação</span>
         </div>
 
-        <div id="portfolioGrid" class="portfolio-grid" style="width: 756px; display: flex; flex-wrap: wrap; gap: 24px; margin-top: 24px; margin-left: 30px;">
-
-            <div class="portfolio-card" style="width: 440px; background-color: white; border-radius: 16px; border: 1px solid #e2e8f0; overflow: hidden; display: flex; flex-direction: column;">
-                <div style="width: 100%; height: 260px; position: relative;">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800" alt="FinTech Dashboard" style="width: 100%; height: 100%; object-fit: cover;">
-                    <span style="position: absolute; top: 12px; right: 12px; background-color: rgba(255,255,255,0.9); font-size: 11px; font-weight: 600; color: #0f172a; padding: 4px 8px; border-radius: 20px;">
-                        <i class="bi bi-eye"></i> 1.2k
-                    </span>
-                </div>
-                <div style="padding: 20px; display: flex; flex-direction: column; gap: 8px;">
-                    <h4 style="font-size: 18px; font-weight: 700; color: #0f172a; margin: 0;">FinTech Dashboard Redesign</h4>
-                    <p style="font-size: 13px; color: #64748b; margin: 0; line-height: 1.4;">Redesign completo da plataforma de investimentos, focando em visualização de dados complexos e simplificação da jornada de compra de ativos.</p>
-                    <div style="display: flex; gap: 8px; margin-top: 8px;">
-                        <span class="tag">UI Design</span>
-                        <span class="tag">Web App</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="portfolio-card" style="width: 292px; background-color: white; border-radius: 16px; border: 1px solid #e2e8f0; overflow: hidden; display: flex; flex-direction: column;">
-                <div style="width: 100%; height: 180px; background-color: #f8fafc;">
-                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800" alt="E-commerce App" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div style="padding: 20px; display: flex; flex-direction: column; gap: 8px;">
-                    <h4 style="font-size: 16px; font-weight: 700; color: #0f172a; margin: 0;">E-commerce Mobile App</h4>
-                    <p style="font-size: 13px; color: #64748b; margin: 0; line-height: 1.4;">Criação de um novo fluxo de checkout para um aplicativo de compras.</p>
-                </div>
-            </div>
-
-            <div class="portfolio-card" style="width: 292px; background-color: white; border-radius: 16px; border: 1px solid #e2e8f0; overflow: hidden; display: flex; flex-direction: column;">
-                <div style="width: 100%; height: 180px;">
-                    <img src="https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=800" alt="Identidade Visual" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div style="padding: 20px; display: flex; flex-direction: column; gap: 8px;">
-                    <h4 style="font-size: 16px; font-weight: 700; color: #0f172a; margin: 0;">Identidade Visual Nexus</h4>
-                    <p style="font-size: 13px; color: #64748b; margin: 0; line-height: 1.4;">Desenvolvimento de marca e guia de estilos para uma startup.</p>
-                </div>
-            </div>
-
-            <div class="portfolio-card" style="width: 440px; background-color: white; border-radius: 16px; border: 1px solid #e2e8f0; overflow: hidden; display: flex; flex-direction: column;">
-                <div style="width: 100%; height: 220px;">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800" alt="SaaS Landing Page" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div style="padding: 20px; display: flex; flex-direction: column; gap: 8px;">
-                    <h4 style="font-size: 18px; font-weight: 700; color: #0f172a; margin: 0;">SaaS Landing Page</h4>
-                    <p style="font-size: 13px; color: #64748b; margin: 0; line-height: 1.4;">Página de conversão focada em destacar as funcionalidades do produto através de uma narrativa visual envolvente usando ilustrações 3D.</p>
-                    <div style="display: flex; gap: 8px; margin-top: 8px;">
-                        <span class="tag">Web Design</span>
-                        <span class="tag">Marketing</span>
-                    </div>
-                </div>
-            </div>
-
+        <div style="display: flex; flex-direction: column; gap: 2px;">
+          <span style="font-size: 13px; color: #64748b; font-weight: 400; line-height: 1.2;">Setores</span>
+          <span style="font-size: 15px; color: #0f172a; font-weight: 600; line-height: 1.2;">Tecnologia da Informação e Serviços</span>
         </div>
-
-        <div class="botao-projetos" style="width: 822px; height: 50px; background-color: #F9F9FF; margin-top: 60px; display: flex; justify-content: center;">
-            <button id="maisProjetosBtn" style="width: 189px; height: 34px; background-color: transparent; border: 1.5px solid #0056D2; border-radius: 12px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
-                <span style="font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 600; color: #0056D2;">Ver mais projetos</span>
-            </button>
-        </div>
+      </div>
 
     </div>
-</div>
+  </main>
+</body>
 
-</main>
+    <!-- Parte do rodapé no final do site (JÁ FINALIZADO) -->
+    <footer style="display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 24px 16px; width: 100%; background-color: #f2f2f2; border-top: 1px solid #bab9b9; box-sizing: border-box;">
+  
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+    <a href="#" style="text-decoration: none; color: #333333; font-size: 14px;">About</a>
+    <a href="#" style="text-decoration: none; color: #333333; font-size: 14px;">Accessibility</a>
+    <a href="#" style="text-decoration: none; color: #333333; font-size: 14px;">Help Center</a>
+    <a href="#" style="text-decoration: none; color: #333333; font-size: 14px;">Privacy & Terms</a>
+    <a href="#" style="text-decoration: none; color: #333333; font-size: 14px;">Ad Choices</a>
+    <a href="#" style="text-decoration: none; color: #333333; font-size: 14px;">Advertising</a>
+    <a href="#" style="text-decoration: none; color: #333333; font-size: 14px;">Business Services</a>
+  </div>
 
-<footer style="display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 24px 16px; width: 100%; background-color: #f2f2f2; border-top: 1px solid #bab9b9; box-sizing: border-box;">
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-        <a href="#" style="text-decoration: none; color: #333333; font-size: 14px;">About</a>
-        <a href="#" style="text-decoration: none; color: #333333; font-size: 14px;">Accessibility</a>
-        <a href="#" style="text-decoration: none; color: #333333; font-size: 14px;">Help Center</a>
-        <a href="#" style="text-decoration: none; color: #333333; font-size: 14px;">Privacy & Terms</a>
-        <a href="#" style="text-decoration: none; color: #333333; font-size: 14px;">Ad Choices</a>
-        <a href="#" style="text-decoration: none; color: #333333; font-size: 14px;">Advertising</a>
-        <a href="#" style="text-decoration: none; color: #333333; font-size: 14px;">Business Services</a>
-    </div>
-
-    <p style="margin: 0; color: #666666; font-size: 13px; text-align: center;">&copy; 2024 DesignPro Professional Network</p>
-</footer>
-
-<script>
-    document.getElementById("contratarBtn").addEventListener("click", function () {
-        this.querySelector("span").textContent = "Solicitação enviada";
-    });
-
-    document.getElementById("gridBtn").addEventListener("click", function () {
-        const grid = document.getElementById("portfolioGrid");
-        grid.style.display = "flex";
-        grid.style.flexDirection = "row";
-
-        const cards = document.querySelectorAll(".portfolio-card");
-
-        cards[0].style.width = "440px";
-        cards[1].style.width = "292px";
-        cards[2].style.width = "292px";
-        cards[3].style.width = "440px";
-    });
-
-    document.getElementById("listBtn").addEventListener("click", function () {
-        const grid = document.getElementById("portfolioGrid");
-        grid.style.display = "flex";
-        grid.style.flexDirection = "column";
-
-        document.querySelectorAll(".portfolio-card").forEach(function (card) {
-            card.style.width = "100%";
-        });
-    });
-
-    document.getElementById("maisProjetosBtn").addEventListener("click", function () {
-        this.querySelector("span").textContent = "Projetos carregados";
-    });
-</script>
-
+  <p style="margin: 0; color: #666666; font-size: 13px; text-align: center;"> &copy; 2024 DesignPro Professional Network
+  </p>
+    </footer>
+</body>
 </body>
 </html>
